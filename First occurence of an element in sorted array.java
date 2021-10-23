@@ -12,7 +12,7 @@
                 low = mid+1;
             }
             
-            else if(arr[mid-1]!=arr[mid] || mid = 0){
+            else if(arr[mid-1]!=arr[mid] || mid == 0){
                 return mid;
             }
             else{
