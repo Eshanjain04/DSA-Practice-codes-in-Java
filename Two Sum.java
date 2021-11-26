@@ -3,18 +3,20 @@
 //if present, then we return index i and Value figure of (target-arr[i]) by map.get(target-arr[i])
 //if not present, we add key,value pair of arr[i],i
 
-static int[] twoSumHash(int[]arr,int trgt){
-        HashMap<Integer,Integer> hm = new HashMap<Integer,Integer>();   
-        int [] res = new int[2];
-        for(int i=0;i<arr.length;i++){
-            if(hm.containsKey(trgt-arr[i])){
+import java.util.*;
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer,Integer> hm = new HashMap<Integer,Integer>();
+        int[] res = new int[2];
+        for(int i=0;i<nums.length;i++){
+            if(hm.containsKey(target-nums[i])){
                 res[0] = i;
-                res[1] = hm.get(trgt-arr[i]);
-                return result;
+                res[1] = hm.get(target-nums[i]);
             }
             else{
-                hm.put(arr[i],i);
+                hm.put(nums[i],i);
             }
         }
-        return result;
+        return res;
     }
+}
